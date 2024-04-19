@@ -8,7 +8,8 @@ metadata:
     # HTTP scheme for srv lookup responses. Supported values are: "http" and "https".
     # Default: http
     - elasticsearch-plugin/srv-scheme: http
-    - elasticsearch-plugin/es-endpoint: "http://186.194.140.154:200"
+    - elasticsearch-plugin/es-endpoint: "http://186.194.140.154.gew1:9200"
+    - elasticsearch-plugin/region: gew1
   tags:
     - elasticsearch
 spec:
