@@ -1,0 +1,19 @@
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: PROPHECY-PROD
+  description: Regional sample cluster discvered via SVR
+  label:
+    # HTTP scheme for srv lookup responses. Supported values are: "http" and "https".
+    # Default: http
+    - elasticsearch-plugin/srv-scheme: http
+    - elasticsearch-plugin/es-endpoint: "http://186.194.140.154:200"
+  tags:
+    - elasticsearch
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests
+  domain: elasticsearch-clusters
+  system: es-clusters
