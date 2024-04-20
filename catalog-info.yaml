@@ -2,38 +2,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: escluster1
+  name: PROPHECY-PROD
   description: Regional sample cluster discvered via SVR
   label:
-    # HTTP scheme for srv lookup responses. Supported values are: "http" and "https".
-    # Default: http
-    - elasticsearch-plugin/srv-scheme: http
-
-    # Optional if regions are declared but the es-endpoint link is
-    # a link to just one cluster you can specify the region with this label
-    # Every region becomes a column in the ES table.
-    # This value is not used if the es-endpoint contains a {region} variable
-    # - elasticsearch-plugin/region: gew1
-
-    # The endpoint (pattern) to the cluster
-    # Varialbes:
-    #    {region}  - Region values declared in you app-config.yaml (elasticsearch-clusters.regions)
-    #
-    # SRV Lookup example
-    - elasticsearch-plugin/es-endpoint: "srv:_escluster1-master._http.{region}.mydomain.net"
-    # HTTP Example
-    # - elasticsearch-plugin/es-endpoint: "http://my-cluster.{region}.domain.com:9200"
-
-    # [Optionial] Links to Cerebro and Kibana
-    # Variables:
-    #   {es-endpoint}           - Full value of es-endpoint (example "https://my-cluster.region1.domain.com:9200")
-    #   {es-endpoint.hostname}  - Hostname from the es-endpoint (example "my-cluster.region1.domain.com")
-    #   {es-endpoint.host}      - Host from the es-endpoint URL (example "my-cluster.region1.domain.com:9200")
-    #   {es-endpoint.port}      - Port from the es-endpoint (example "9200")
-    #   {es-endpoint.scheme}    - Scheme from the es-endpoint (example "https")
-    #   {es-endpoint.protocol}  - Protocol from the es-endpoint (example "https:")
-    - elasticsearch-plugin/kibana-endpoint: "{es-endpoint.scheme}://{es-endpoint.hostname}:5601"
-    - elasticsearch-plugin/cerebro-endpoint: "http://cerebro.eu-region.mydomain.net:9000/#!/overview?host={es-endpoint}"
+    - elasticsearch-plugin/es-endpoint: "http://186.194.140.154:9200"
   tags:
     - elasticsearch
 spec:
