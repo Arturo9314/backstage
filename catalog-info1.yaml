@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: ABCCapital
   annotations:
-    elasticsearch/index-name:abccapital-site247-24-10-2023
+    elasticsearch/index-name: "abccapital-site247-24-10-2023"
 spec:
   lifecycle: production
   owner: prophecy
