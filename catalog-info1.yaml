@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ABC-Capital
+  name: ABCCapital
   annotations:
     elasticsearch/index-name:abccapital-site247-24-10-2023
 spec:
