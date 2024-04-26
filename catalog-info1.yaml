@@ -2,9 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ABCCapital
-  annotations:
-    elasticsearch/index-name: "abccapital-site247-24-10-2023"
+  description: "Es un indice"
+  label: 
+    - elasticsearch/index-name: "abccapital-site247-24-10-2023"
 spec:
-  lifecycle: production
+  lifecycle: experimental
   owner: prophecy
   type: service
